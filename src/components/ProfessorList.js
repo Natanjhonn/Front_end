@@ -5,7 +5,7 @@ const ProfessorList = () => {
     const [professores, setProfessores] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/professores')
+        axios.get('https://back-end-1-kr7f.onrender.com/api/professores')
             .then((response) => setProfessores(response.data))
             .catch((error) => console.error(error));
     }, []);
