@@ -16,7 +16,7 @@ const AddProfessor = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/professores', formData)
+    axios.post('https://back-end-1-kr7f.onrender.com/api/professores', formData)
       .then(() => alert('Professor cadastrado!'))
       .catch((error) => console.error(error));
   };

@@ -15,7 +15,7 @@ const EditProfessor = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/professores/${id}`)
+      .get(`https://back-end-1-kr7f.onrender.com/api/professores/${id}`)
       .then((response) => setFormData(response.data))
       .catch((error) => console.error(error));
   }, [id]);
@@ -27,7 +27,7 @@ const EditProfessor = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:5000/api/professores/${id}`, formData)
+      .put(`https://back-end-1-kr7f.onrender.com/api/professores/${id}`, formData)
       .then(() => {
         alert('Professor atualizado com sucesso!');
         navigate('/');

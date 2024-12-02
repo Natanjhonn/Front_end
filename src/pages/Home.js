@@ -12,7 +12,7 @@ const Home = () => {
 
   const fetchProfessores = () => {
     axios
-      .get('http://localhost:5000/api/professores')
+      .get('https://back-end-1-kr7f.onrender.com/api/professores')
       .then((response) => setProfessores(response.data))
       .catch((error) => console.error(error));
   };
@@ -21,7 +21,7 @@ const Home = () => {
     const confirm = window.confirm('Tem certeza que deseja excluir este professor?');
     if (confirm) {
       axios
-        .delete(`http://localhost:5000/api/professores/${id}`)
+        .delete(`https://back-end-1-kr7f.onrender.com/api/professores/${id}`)
         .then(() => {
           alert('Professor excluído com sucesso!');
           fetchProfessores(); 
